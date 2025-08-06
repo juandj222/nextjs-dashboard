@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import NavLinks from '@/app/ui/nav-links';
+import NavLinks from '@/app/ui/dashboard/nav-links';
 
 export default function facture() {
   <NavLinks />
