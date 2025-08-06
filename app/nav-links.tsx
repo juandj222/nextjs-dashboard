@@ -1,5 +1,5 @@
 'use client';
- 
+
 import {
   UserGroupIcon,
   HomeIcon,
@@ -8,12 +8,17 @@ import {
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
- 
-// ...
- 
+
+// ✅ DÉCLARATION DES LIENS ICI
+const links = [
+  { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
+  { name: 'Factures', href: '/dashboard/factures', icon: DocumentDuplicateIcon },
+  { name: 'Utilisateurs', href: '/dashboard/utilisateurs', icon: UserGroupIcon },
+];
+
 export default function NavLinks() {
   const pathname = usePathname();
- 
+
   return (
     <>
       {links.map((link) => {
